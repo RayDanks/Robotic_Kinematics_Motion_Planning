@@ -4,8 +4,9 @@ cw2 -> cw2q4 -> src -> youbotKine.cpp
 
 Since this above file is not executable, the package kine_checker is included. Note that whilst I have adjusted this package, I did not originally write it. This package interfaces with the kdl_kine package (KDL being a popular C++ package for 
 
-IN order to run this file, simply catkin make and then rosrun the kdl_kine package.
+In order to run this file, simply catkin make and then rosrun the kdl_kine package.
 
+__________________________________________________________________________________
 
 
 Secondly is the path planning. This can be found in the following directory:

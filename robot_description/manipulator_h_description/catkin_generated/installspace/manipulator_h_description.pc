@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: manipulator_h_description
+Description: Description of manipulator_h_description
+Version: 0.3.1
+Cflags: 
+Libs: -L/usr/local/lib 
+Requires: 

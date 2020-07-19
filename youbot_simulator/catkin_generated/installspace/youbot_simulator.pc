@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: youbot_simulator
+Description: Description of youbot_simulator
+Version: 0.0.0
+Cflags: 
+Libs: -L/usr/local/lib 
+Requires: 

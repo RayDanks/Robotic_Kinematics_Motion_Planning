@@ -1,0 +1,24 @@
+q4d - iterative: the output is a double* array (q) as specified by the function. Once you print this q value however, it outputs a hexadecimal. THerefore, within
+the function I have created for the iterative inverse kinematics, I have printed out the respective joint values, and the variables which make up q are k0, k1, k2, k3 and k4
+and these are also the respective joint angles. I also print the target pose, along with the pose that my function attains.
+
+q5 - In order to change the question parts, the integer "checkpoint_data" must be changed - the original code is commented above where this integer is defined if the assessor would
+like to use that.
+
+q5a - Even though I believe I am publishing the trajectories correctly, the robot does not move. However, I have managed to create a my_traj object which when printing, shows all
+of the correct trajectories at the correct times. This shows that my algorithm works and if there is an error, it is purely with publishin gmy_traj to the robot.
+
+q5b - THis has the same issues as q5a. ONce again, all of my algorithm works and I have printed a my_traj object to prove this and check it, however, in this question it is likely
+much more useful to look at some of the other variables which print to the console, such as the shortest distance and the corresponding combination/sequence of checkpoints.
+
+For both q5a and q5b, I could not figure out how to find out what the default joint angles were when the robot spawns in. THerefore, for both of these questions, I have assumed that the starting
+joint angles are all zero, and then the robot moves from there. I tried listening to many different ros topics with no luck.
+
+If there is a way for the assessor to input the initial joint variables in q5b (this is indicated in the code, as the instantiation of my_pt_initial) then the actual shortest distance could be calculated
+and my algorithm could be validly compared to others' (of course this is assuming that the initial joint angles are not all zero).
+
+q5c - Process explained in report but code not attempted.
+
+Matlab .m script is attached for q4b symbolic forward kinematics matrix. ONly the final section of this code needs to run to produce a result.
+
+The output of the inverse kinematics closed form function is a 5x1 matrix, which lists the joint angles (theta1 to theta 5, in order).

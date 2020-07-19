@@ -1,0 +1,21 @@
+The first part of this system is calculation of core kinematic principles (Jacobian, detecting singularities) on the Youbot. This also includes forward and inverse kinematic calculations, allowing the robot to move to any location within its workspace. This can be found in the following directory:
+
+cw2 -> cw2q4 -> src -> youbotKine.cpp
+
+Since this above file is not executable, the package kine_checker is included. Note that whilst I have adjusted this package, I did not originally write it. This package interfaces with the kdl_kine package (KDL being a popular C++ package for 
+
+IN order to run this file, simply catkin make and then rosrun the kdl_kine package.
+
+
+
+Secondly is the path planning. This can be found in the following directory:
+
+cw2 -> cw2q5 -> src -> cw2q5_node.cpp
+
+These sections begin with opening ros bags which contain specific points in space which the robot much navigate through.
+In the above cpp, there is an integer "checkpoint_data", which must be set to 1 or 2 depending on
+which mode is needed. Mode 1 dictates a linear plan for the robot to go to each of the points sequentially, whilst mode 2 bags all of the checkpoints required and rearranges them in such a way such that the quickest path is found and carried out (this is done through an algorithm written by me to simulate different possibilities).
+To run this, simply catkin make, roslaunch the youbot_simulator and then rosrun the cw2q5_node node.
+
+Whilst I have adjusted many files in this repo (header files, launch files etc), my main contributions are in the .cpp files detailed above.
+
